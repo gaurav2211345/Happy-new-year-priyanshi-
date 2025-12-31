@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Priyanshi 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    max-width: 750px;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+    animation: fadeUp 1.2s ease;
+    text-align: center;
+    z-index: 2;
+}
+
+.card h1 {
+    color: #e75480;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 20px;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.couple {
+    font-size: 55px;
+    margin-top: 25px;
+    animation: coupleBeat 2s infinite;
+}
+
+@keyframes coupleBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>For You 💕</h1>
+    <div class="name">Priyanshi 💖</div>
+
+    <p>
+        I'm so glad I met you 💫 You have the sweetest soul I've ever seen 💞  
+        The time we spend together is healing my heart 🕊️  
+        It feels like I've known you longer than it's actually been ⏳  
+        And I love every moment with you 💕  
+        I may not see you every day, but I love you every day 💌  
+        You mean the world to me 🌍  
+        You bring a kind of peace into my life that I didn't know I was missing 🌸  
+        Just knowing you're out there makes the world feel softer, safer 🫶🏼  
+        With you, even the quiet moments feel full 🌙  
+        Even hard days feel lighter ☀️  
+        You're not just someone I care about…  
+        You're someone my heart naturally gravitates toward 💓  
+        Thank you for being exactly who you are 🌹  
+        Loving you feels like coming home 🏡❤️  
+        And no matter where life takes us, you'll always have a permanent place in my heart 🔐  
+        Every time I think about you, I feel this quiet kind of happiness ☁️  
+        The kind that doesn't shout but settles gently and stays 🕯️
+    </p>
+
+    <div class="couple">👩‍❤️‍👨</div>
+</div>
+
+<!-- Floating hearts -->
+<script>
+const hearts = ["❤️","💖","💘","💕","💞"];
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}, 500);
+</script>
+
+</body>
+</html>
